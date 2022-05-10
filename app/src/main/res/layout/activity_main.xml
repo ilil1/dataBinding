@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. 레이아웃뷰와 바인딩할 데이터들 명칭과 클래스지정 -->
+    <data>
+        <variable
+            name="user"
+            type="com.project.databinding.User" />
+    </data>
+    <!-- 2. 레이아웃 뷰 : 기존에 root로 만들었던 뷰 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="@{user.firstName}"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="@{user.lastName}"
+            android:textSize="50sp" />
+    </LinearLayout>
+</layout>
